@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sA7-a5-bS8">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,219 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lyrics_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJq-sE-Ynl">
+                                <rect key="frame" x="35" y="443.5" width="103.5" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="u49-JL-u5s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeO-pQ-oZp">
+                                <rect key="frame" x="35" y="583" width="103.5" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Uev-Mg-DJr"/>
+                                    <constraint firstAttribute="width" constant="103.5" id="VAV-Ft-vcI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4b-A9-hVn">
+                                <rect key="frame" x="119.5" y="722.5" width="175" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="3LQ-rz-WJ9"/>
+                                    <constraint firstAttribute="height" constant="50" id="agn-B0-Cg0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="Lyrics Found!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cXM-Ip-Pee" kind="show" id="fMJ-gg-xCN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOI-D8-tU9">
+                                <rect key="frame" x="119.5" y="722.5" width="175" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bGh-dn-kiV"/>
+                                    <constraint firstAttribute="width" constant="175" id="bPe-w9-RiQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="Find Lyrics">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="findLyricsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Nx-aC-efp"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Artist Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hSK-e8-Xeo">
+                                <rect key="frame" x="158.5" y="443.5" width="220.5" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QrY-WU-yWQ"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Emter Song Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Keh-ok-MCe">
+                                <rect key="frame" x="158.5" y="583" width="220.5" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="iDb-Rv-B85"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 2" translatesAutoresizingMaskIntoConstraints="NO" id="fo4-OQ-sF6">
+                                <rect key="frame" x="87" y="114" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="QvI-Qv-0B7"/>
+                                    <constraint firstAttribute="height" constant="240" id="arc-5A-aVL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 1" translatesAutoresizingMaskIntoConstraints="NO" id="4Qf-IO-mfi">
+                                <rect key="frame" x="87" y="40" width="250" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="HTS-uZ-rgA"/>
+                                    <constraint firstAttribute="width" constant="250" id="PcT-ya-a5Q"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bOI-D8-tU9" secondAttribute="bottom" constant="89.5" id="Gu4-13-Vhl"/>
+                            <constraint firstItem="bOI-D8-tU9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ls4-jg-EdH"/>
+                            <constraint firstItem="OeO-pQ-oZp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="RJP-Jf-8SC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f4b-A9-hVn" secondAttribute="bottom" constant="89.5" id="RRh-LS-GO2"/>
+                            <constraint firstItem="hSK-e8-Xeo" firstAttribute="leading" secondItem="ZJq-sE-Ynl" secondAttribute="trailing" constant="20" id="XeF-IM-Lb2"/>
+                            <constraint firstItem="fo4-OQ-sF6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZG1-Me-PYu"/>
+                            <constraint firstItem="4Qf-IO-mfi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-100" id="d1x-FK-KuA"/>
+                            <constraint firstItem="Keh-ok-MCe" firstAttribute="top" secondItem="hSK-e8-Xeo" secondAttribute="bottom" constant="89.5" id="dID-Fl-r3c"/>
+                            <constraint firstItem="Keh-ok-MCe" firstAttribute="leading" secondItem="OeO-pQ-oZp" secondAttribute="trailing" constant="20" id="gLV-E2-Edg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hSK-e8-Xeo" secondAttribute="trailing" constant="35" id="gmz-Uw-HPv"/>
+                            <constraint firstItem="OeO-pQ-oZp" firstAttribute="top" secondItem="ZJq-sE-Ynl" secondAttribute="bottom" constant="89.5" id="je3-dR-A6l"/>
+                            <constraint firstItem="ZJq-sE-Ynl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="obg-Ah-Hfs"/>
+                            <constraint firstItem="bOI-D8-tU9" firstAttribute="top" secondItem="OeO-pQ-oZp" secondAttribute="bottom" constant="89.5" id="uhu-4C-VYi"/>
+                            <constraint firstItem="f4b-A9-hVn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="utS-Al-8Qg"/>
+                            <constraint firstItem="4Qf-IO-mfi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="viF-OD-W0g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Keh-ok-MCe" secondAttribute="trailing" constant="35" id="y0m-yr-EAq"/>
+                            <constraint firstItem="f4b-A9-hVn" firstAttribute="top" secondItem="Keh-ok-MCe" secondAttribute="bottom" constant="89.5" id="y8b-w4-0tM"/>
+                            <constraint firstItem="ZJq-sE-Ynl" firstAttribute="top" secondItem="fo4-OQ-sF6" secondAttribute="bottom" constant="89.5" id="yj6-qy-QYx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="K2L-4y-lau">
+                        <barButtonItem key="backBarButtonItem" title=" " id="dsY-Wa-8a7"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="artistNameTextField" destination="hSK-e8-Xeo" id="MNF-d6-rsN"/>
+                        <outlet property="findLyricsButtonView" destination="bOI-D8-tU9" id="Lt6-TT-GOS"/>
+                        <outlet property="foundButtonView" destination="f4b-A9-hVn" id="wlW-fc-gEt"/>
+                        <outlet property="songNameTextField" destination="Keh-ok-MCe" id="UOX-2R-bLH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1028" y="131"/>
+        </scene>
+        <!--Lyrics View Controller-->
+        <scene sceneID="JP6-iV-UxI">
+            <objects>
+                <viewController id="cXM-Ip-Pee" customClass="LyricsViewController" customModule="Lyrics_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f62-GK-5cp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 2" translatesAutoresizingMaskIntoConstraints="NO" id="rae-BT-znr">
+                                <rect key="frame" x="87" y="114" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Vp5-yt-jFN"/>
+                                    <constraint firstAttribute="width" constant="240" id="hAX-Da-Mhv"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 1" translatesAutoresizingMaskIntoConstraints="NO" id="Azd-V0-QsC">
+                                <rect key="frame" x="87" y="40" width="250" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Yam-in-KNI"/>
+                                    <constraint firstAttribute="width" constant="250" id="wj5-pe-UAr"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dK3-7x-doc">
+                                <rect key="frame" x="15" y="389" width="384" height="468"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemFillColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dK3-7x-doc" firstAttribute="top" secondItem="rae-BT-znr" secondAttribute="bottom" constant="35" id="7dl-MT-mYL"/>
+                            <constraint firstItem="rae-BT-znr" firstAttribute="top" secondItem="Azd-V0-QsC" secondAttribute="bottom" constant="22" id="WsN-vg-nfp"/>
+                            <constraint firstItem="Azd-V0-QsC" firstAttribute="top" secondItem="f62-GK-5cp" secondAttribute="topMargin" constant="-100" id="htT-eZ-A7S"/>
+                            <constraint firstItem="Azd-V0-QsC" firstAttribute="leading" secondItem="rVu-gX-Uim" secondAttribute="leading" constant="87" id="jhi-4p-42E"/>
+                            <constraint firstItem="dK3-7x-doc" firstAttribute="leading" secondItem="rVu-gX-Uim" secondAttribute="leading" constant="15" id="meS-bM-PbD"/>
+                            <constraint firstItem="rae-BT-znr" firstAttribute="centerX" secondItem="f62-GK-5cp" secondAttribute="centerX" id="pKP-fh-gsq"/>
+                            <constraint firstItem="rVu-gX-Uim" firstAttribute="trailing" secondItem="dK3-7x-doc" secondAttribute="trailing" constant="15" id="rdw-Oa-5zl"/>
+                            <constraint firstItem="rVu-gX-Uim" firstAttribute="bottom" secondItem="dK3-7x-doc" secondAttribute="bottom" constant="5" id="wJk-sI-Apu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rVu-gX-Uim"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xAW-xA-U0u"/>
+                    <connections>
+                        <outlet property="lyricsSpot" destination="dK3-7x-doc" id="grX-ku-J6I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vvx-ZM-5wI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1940.5797101449277" y="129.91071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RQc-MV-KD6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sA7-a5-bS8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="NfL-FJ-2Jm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="D5v-dd-NSI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btI-1O-9A2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Ellipse 2" width="240" height="240"/>
+        <image name="Rectangle 1" width="175" height="52"/>
+    </resources>
 </document>
